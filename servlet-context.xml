@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
    <!-- 이메일 인증 관련 빈 등록 -->
+   <!-- ⚠️ 실제 계정 정보는 application.properties에 spring.mail.username/password로 설정하세요 -->
    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
       <property name="host" value="smtp.gmail.com" />
       <property name="port" value="587" />
-      <property name="username" value="slehd3723@gmail.com" />
-      <property name="password" value="TmT(@)8619" />
+      <property name="username" value="${spring.mail.username}" />
+      <property name="password" value="${spring.mail.password}" />
       <property name="defaultEncoding" value="utf-8"></property>
       <property name="javaMailProperties">
          <props>
                 <prop key="mail.transport.protocol">smtp</prop>
                 <prop key="mail.smtp.auth">true</prop>
-                <!-- gmail의 경우 보안문제 업데이트로 인해 SSLSocketFactory를 추가해야 smtp 사용 가능. -->
                 <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
                 <prop key="mail.smtp.starttls.enable">true</prop>
                 <prop key="mail.debug">true</prop>
@@ -19,5 +19,4 @@
 				<prop key="mail.smtp.ssl.protocols">TLSv1.2</prop>
             </props>
       </property>
-      
    </bean>

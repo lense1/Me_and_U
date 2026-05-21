@@ -39,3 +39,9 @@ bin/
 # OS 파일
 .DS_Store
 Thumbs.db
+
+# 민감 정보
+src/main/resources/been/MailAuthBean.xml
+application.properties
+application.yml
+servlet-context.xml

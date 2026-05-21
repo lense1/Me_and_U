@@ -31,7 +31,7 @@ public class EmailAuthService {
 	// 이메일 보낼 양식
 	public String joinEmail(String email) {
 		RandomNumber();
-		String setFrom = "slehd3723@gmail.com";
+		String setFrom = System.getenv("SMTP_USERNAME");
 		String toMail = email;
 		// 이메일 제목
 		String title = "회원 가입 인증 이메일 입니다.";
