@@ -1,6 +1,0 @@
-/**
- * Detailpage.js
- */
- 
- 
- 

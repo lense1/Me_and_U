@@ -1,3 +1,0 @@
-/**
- * cscenter.js
- */

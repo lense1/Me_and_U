@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# 컴파일 결과물
+bin/
+*.class
+
+# OS 파일
+.DS_Store
+Thumbs.db
